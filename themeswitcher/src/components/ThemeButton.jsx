@@ -12,17 +12,30 @@ export default function ThemeButton() {
         }
     };
     return (
-        <label className="relative inline-flex items-center cursor-pointer">
-            <input
-                type="checkbox"
-                className="sr-only peer"
-                aria-label="Toggle theme"
-                onChange={onChangeButton}
-                checked={themeMode === "dark"}
-            />
-            <div className="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
-            <span className="ml-3 text-sm font-medium text-gray-900">Toggle Theme</span>
-        </label>
+        <div className="flex flex-col items-center gap-2">
+            <span className="text-sm font-medium text-gray-900 dark:text-gray-100">
+                Switch theme
+            </span>
+            <label className="relative inline-flex items-center cursor-pointer">
+                <input
+                    type="checkbox"
+                    className="sr-only peer"
+                    aria-label="Toggle theme"
+                    onChange={onChangeButton}
+                    checked={themeMode === "dark"}
+                />
+                <div className="w-24 h-12 rounded-full bg-slate-200 dark:bg-slate-800 transition-colors duration-300 relative">
+                    <span className="absolute left-3 top-1/2 -translate-y-1/2 text-yellow-400 text-lg">☀️</span>
+                    <span className="absolute right-3 top-1/2 -translate-y-1/2 text-slate-500 dark:text-slate-200 text-lg">🌙</span>
+                    <div
+                        className="pointer-events-none absolute left-1 top-1 w-10 h-10 bg-white rounded-full shadow-md transition-transform duration-300 flex items-center justify-center text-slate-900 dark:text-slate-900"
+                        style={{ transform: themeMode === 'dark' ? 'translateX(3rem)' : 'translateX(0)' }}
+                    >
+                        {themeMode === 'dark' ? '🌜' : '☀️'}
+                    </div>
+                </div>
+            </label>
+        </div>
     );
 }
 
