@@ -1,0 +1,10 @@
+{
+  "editor.quickSuggestions": { "other": true, "comments": false, "strings": false },
+  "editor.suggestOnTriggerCharacters": true,
+  "editor.wordBasedSuggestions": true,
+  "editor.parameterHints.enabled": true,
+  "editor.inlineSuggest.enabled": false,
+  "editor.suggest.showIcons": true,
+  "editor.suggest.showInlineDetails": true,
+  "github.copilot.enable": false
+}
