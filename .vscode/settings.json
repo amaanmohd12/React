@@ -1,7 +1,7 @@
 {
   "editor.quickSuggestions": { "other": true, "comments": false, "strings": false },
   "editor.suggestOnTriggerCharacters": true,
-  "editor.wordBasedSuggestions": true,
+  "editor.wordBasedSuggestions": "matchingDocuments",
   "editor.parameterHints.enabled": true,
   "editor.inlineSuggest.enabled": false,
   "editor.suggest.showIcons": true,
